@@ -100,17 +100,26 @@ const automateEmails = () => __awaiter(void 0, void 0, void 0, function* () {
     const recruiters = readExcel(filePath);
     for (const recruiter of recruiters) {
         const { Email, Name, Company } = recruiter;
-        const subject = "Job Application for [Position]";
-        const text = `Hi ${Name},
+        const subject = "Application for Junior Developer Roles";
+        const text = `Dear ${Name},
 
 I hope this email finds you well. I am writing to express my interest in a potential role at ${Company}. 
 
-[Include more details about your qualifications and interest in the company]
+I am Vaibhav Singh, a undergraduate student at IIIT Bhopal (2024). I have been an active programmer and am currently in my Final year. I am proficient in Data Structures and Algorithms and MERN stack and a beginner in Nextjs, DevOps fundamentals. I have solved 300+ problems on several coding platforms. I have also been doing competitive programming since last year. I have much experience in developing projects which are listed on my Github. 
+ 
+I recently heard that you're hiring, and I'd like to apply.
+I am attaching a copy of my resume. Please take a moment to evaluate it and give me this chance.
+
+Linkedin: https://www.linkedin.com/in/vaibhav-singh-11vs/
+Github: https://github.com/HVz11
+Resume: https://drive.google.com/file/d/1ldF0vvzma6vXnxk2Al9N4IgIFO8SpWR8/view?usp=sharing
 
 Thank you for considering my application.
 
 Best regards,
-[Your Name]`;
+Vaibhav Singh
+Contact No: 8010875037
+`;
         try {
             const info = yield sendEmail(Email, subject, text);
             console.log(`Email sent to ${Email}: ${info.response}`);
