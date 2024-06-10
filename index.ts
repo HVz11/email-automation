@@ -4,9 +4,7 @@ import * as fs from "fs";
 
 // Sample data to be written to the Excel file
 const recruiters = [
-  { Name: "John Doe", Email: "john.doe@example.com", Company: "Company A" },
-  { Name: "Jane Smith", Email: "jane.smith@example.com", Company: "Company B" },
-  { Name: "Jim Brown", Email: "jim.brown@example.com", Company: "Company C" },
+  { Name: "John Doe", Email: "exwhyzed884@gmail.com", Company: "Company A" },
 ];
 
 // Function to create an XLSX file
@@ -37,8 +35,8 @@ if (!fs.existsSync(filePath)) {
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "exwhyzed884@gmail.com",
-    pass: "Vaibhav@11", // Use your App Password here
+    user: "vs630916@gmail.com",
+    pass: "vzpw zwjg moou kvcy", 
   },
 });
 
@@ -57,7 +55,7 @@ const sendEmail = (
   text: string
 ): Promise<nodemailer.SentMessageInfo> => {
   const mailOptions = {
-    from: "exwhyzed884@gmail.com",
+    from: "vs630916@gmail.com",
     to,
     subject,
     text,
