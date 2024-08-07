@@ -100,25 +100,32 @@ const automateEmails = () => __awaiter(void 0, void 0, void 0, function* () {
     const recruiters = readExcel(filePath);
     for (const recruiter of recruiters) {
         const { Email, Name, Company } = recruiter;
-        const subject = "Application for Junior Developer Roles";
+        const subject = "Software Engineering Student Interested in SDE/Full Stack roles";
         const text = `Dear ${Name},
 
-I hope this email finds you well. I am writing to express my interest in a potential role at ${Company}. 
+I hope this message finds you well. I am Vaibhav Singh, a UG software engineering student at IIIT Bhopal (2024).
 
-I am Vaibhav Singh, a undergraduate student at IIIT Bhopal (2024). I have been an active programmer and am currently in my Final year. I am proficient in Data Structures and Algorithms and MERN stack and a beginner in Nextjs, DevOps fundamentals. I have solved 300+ problems on several coding platforms. I have also been doing competitive programming since last year. I have much experience in developing projects which are listed on my Github. 
- 
-I recently heard that you're hiring, and I'd like to apply.
-I am attaching a copy of my resume. Please take a moment to evaluate it and give me this chance.
+I am writing to express my strong interest in joining ${Company} as an SDE/Full Stack Intern and to inquire about any relevant opportunities within your organization.
 
-Linkedin: https://www.linkedin.com/in/vaibhav-singh-11vs/
-Github: https://github.com/HVz11
+I am proficient in JavaScript, C/C++, Python, SQL, and Typescript, and I have experience with Node, Express, Next.js, MongoDB, PostgreSQL, Django, and various Python libraries. I possess strong skills in MERN stack, Data Structures, and Algorithms, and I am currently expanding my knowledge in Next.js and DevOps.
+
+Here are a few highlights of my  Internship Experience:
+I am currently doing an internship at KaamBack as a Full Stack Intern. My day-to-day tasks mainly involve working on the backend of the website. I develop the service to match clients with the talent they require using a rating-based system. I am also working on the DevOps part, such as implementing the CI/CD pipeline and Dockerizing the application.
+
+I am especially interested in ${Company}'s vision and I believe that my skills and enthusiasm are well-aligned with your organization's goals. I am eager to contribute my technical skills, collaborate with your team, and continue to grow as a software engineer.
+
+I have attached my resume to provide you with a more detailed overview of my qualifications.
+
 Resume: https://drive.google.com/file/d/1ldF0vvzma6vXnxk2Al9N4IgIFO8SpWR8/view?usp=sharing
+Github: https://github.com/HVz11
 
-Thank you for considering my application.
+Thank you for considering my application. I look forward to speaking with you about potential opportunities. Please feel free to reach out to me via LinkedIn or email at vs630916@gmail.com  to schedule a conversation at your convenience.
 
-Best regards,
-Vaibhav Singh
-Contact No: 8010875037
+Warm regards,
+
+Vaibhav Singh 
+Linkedin: https://www.linkedin.com/in/vaibhav-singh-11vs/
+Mobile no.: +91 8010875037
 `;
         try {
             const info = yield sendEmail(Email, subject, text);

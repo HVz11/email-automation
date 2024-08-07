@@ -89,38 +89,32 @@ const automateEmails = async () => {
   for (const recruiter of recruiters) {
     const { Email, Name, Company } = recruiter;
     const subject =
-      "Software Engineering Student Interested in SDE/Full Stack Roles";
+      "Software Engineering Student Interested in SDE/Full Stack roles";
     const text = `Dear ${Name},
 
-I hope this message finds you well. My name is Vaibhav Singh, and I am a UG software engineering student at IIIT Bhopal (2024).
+I hope this message finds you well. I am Vaibhav Singh, a UG software engineering student at IIIT Bhopal (2024).
 
 I am writing to express my strong interest in joining ${Company} as an SDE/Full Stack Intern and to inquire about any relevant opportunities within your organization.
 
-I am passionate about software development and have a solid foundation in programming languages such as JavaScript, C/C++, Python, SQL, and Typescript as well as experience in Node, Express, NextJs, tailwind, MongoDB, PostgreSQL, Django, and other Python libraries, etc 
+I am proficient in JavaScript, C/C++, Python, SQL, and Typescript, and I have experience with Node, Express, Next.js, MongoDB, PostgreSQL, Django, and various Python libraries. I possess strong skills in MERN stack, Data Structures, and Algorithms, and I am currently expanding my knowledge in Next.js and DevOps.
 
-Here are a few highlights of my qualifications:
-I am proficient in MERN stack and Data Structures and Algorithms and a beginner in Nextjs, and DevOps. I have also been doing competitive programming since last year. I have much experience in developing Full Stack projects which are listed on my Github. 
-
+Here are a few highlights of my  Internship Experience:
 I am currently doing an internship at KaamBack as a Full Stack Intern. My day-to-day tasks mainly involve working on the backend of the website. I develop the service to match clients with the talent they require using a rating-based system. I am also working on the DevOps part, such as implementing the CI/CD pipeline and Dockerizing the application.
 
-I worked on a research paper titled "Design and Modelling of Machine Learning Based Photonic Sensor for Different Disease Detections", which has been accepted for presentation at the IEEE ICDV 2024 conference. We used pre-tuned machine learning models and Python, along with other libraries, for improved visualization and analysis.
-
-
-I am particularly drawn to ${Company}'s vision and believe that my skills and enthusiasm align well with your organization's goals. I am eager to contribute my technical skills, collaborate with your team, and continue my growth as a software engineer.
+I am especially interested in ${Company}'s vision and I believe that my skills and enthusiasm are well-aligned with your organization's goals. I am eager to contribute my technical skills, collaborate with your team, and continue to grow as a software engineer.
 
 I have attached my resume to provide you with a more detailed overview of my qualifications.
 
 Resume: https://drive.google.com/file/d/1ldF0vvzma6vXnxk2Al9N4IgIFO8SpWR8/view?usp=sharing
 Github: https://github.com/HVz11
 
-Thank you for considering my application. I look forward to the possibility of speaking with you about potential opportunities. Please feel free to reach out to me via LinkedIn or email at vs630916@gmail.com  to schedule a conversation at your convenience.
+Thank you for considering my application. I look forward to speaking with you about potential opportunities. Please feel free to reach out to me via LinkedIn or email at vs630916@gmail.com  to schedule a conversation at your convenience.
 
 Warm regards,
 
 Vaibhav Singh 
 Linkedin: https://www.linkedin.com/in/vaibhav-singh-11vs/
 Mobile no.: +91 8010875037
-
 `;
 
     try {
