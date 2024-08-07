@@ -35,30 +35,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const nodemailer = __importStar(require("nodemailer"));
 const xlsx = __importStar(require("xlsx"));
 const fs = __importStar(require("fs"));
-// Sample data to be written to the Excel file
-const recruiters = [
-    { Name: "John Doe", Email: "exwhyzed884@gmail.com", Company: "Company A" },
-];
-// Function to create an XLSX file
-const createExcelFile = (data, filePath) => {
-    // Convert the data to a worksheet
-    const worksheet = xlsx.utils.json_to_sheet(data);
-    // Create a new workbook and append the worksheet
-    const workbook = xlsx.utils.book_new();
-    xlsx.utils.book_append_sheet(workbook, worksheet, "Recruiters");
-    // Write the workbook to a file
-    xlsx.writeFile(workbook, filePath);
-};
-// Specify the file path for the new Excel file
-const filePath = "./recruiters.xlsx";
-// Create the Excel file with the sample data if it doesn't exist
-if (!fs.existsSync(filePath)) {
-    createExcelFile(recruiters, filePath);
-    console.log(`Excel file created at ${filePath}`);
-}
-else {
-    console.log(`Excel file already exists at ${filePath}`);
-}
+// Specify the file path for the Excel file
+const filePath = "./sample.xlsx";
 // Email configuration
 const transporter = nodemailer.createTransport({
     service: "gmail",
